@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link href="{% static 'output.css' %}" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="inter-font bg-gray-100">
+    <article class="flex flex-col gap-4 w-full p-3">
+      <article
+        class="flex items-center justify-between bg-white p-3 rounded-md shadow-sm"
+      >
+        <div class="flex gap-2 items-center">
+          <p class="font-bold">Yara</p>
+          <div class="bg-blue-100 text-blue-500 px-3 py-1 rounded-full">
+            <span>Supply Mgr.</span>
+          </div>
+        </div>
+      </article>
+      <article
+        class="flex items-center justify-between bg-white p-3 rounded-md shadow-sm"
+      >
+        <div class="flex gap-2 items-center overflow-auto">
+          <div class="bg-rose-100 text-rose-500 px-3 py-1 rounded-full">
+            <span>Sun</span>
+          </div>
+          <div class="bg-emerald-100 text-emerald-500 px-3 py-1 rounded-full">
+            <span>Mon</span>
+          </div>
+          <div class="bg-rose-100 text-rose-500 px-3 py-1 rounded-full">
+            <span>Tues</span>
+          </div>
+          <div class="bg-emerald-100 text-emerald-500 px-3 py-1 rounded-full">
+            <span>Wed</span>
+          </div>
+          <div class="bg-emerald-100 text-emerald-500 px-3 py-1 rounded-full">
+            <span>Thurs</span>
+          </div>
+          <div class="bg-emerald-100 text-emerald-500 px-3 py-1 rounded-full">
+            <span>Fri</span>
+          </div>
+          <div class="bg-emerald-100 text-emerald-500 px-3 py-1 rounded-full">
+            <span>Sat</span>
+          </div>
+        </div>
+      </article>
+      <article class="flex flex-col gap-6 bg-white p-3 rounded-md shadow-sm">
+        <div>
+          <p class="font-bold">UNSET</p>
+        </div>
+        <div>
+          <div class="flex gap-2 items-center">
+            <p>Started At:</p>
+            <span class="text-emerald-500 font-bold">UNSET</span>
+          </div>
+          <div class="flex gap-2 items-center">
+            <p>Ended At:</p>
+            <span class="text-rose-500 font-bold">UNSET</span>
+          </div>
+          <div class="flex gap-2 items-center">
+            <p>Shift Time:</p>
+            <span class="font-bold text-violet-500">8H</span>
+          </div>
+        </div>
+      </article>
+      <article class="flex flex-col gap-6 bg-white p-3 rounded-md shadow-sm">
+        <div>
+          <p class="font-bold">Timer</p>
+        </div>
+        <div>
+          <div class="flex flex-col gap-3">
+            <div class="flex flex-col">
+              <p>Remaining Time</p>
+              <span class="font-bold text-violet-500">08:00:00</span>
+            </div>
+            <div class="flex-col gap-2">
+              <p>Overtime</p>
+              <span class="font-bold text-amber-500">00:00:00</span>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="flex flex-col gap-4 bg-white p-3 rounded-md shadow-sm">
+        <p class="font-bold">No Shifts</p>
+        <p>Next Shift Starts 16 hours after the start of last shift.</p>
+      </article>
+      <div class="flex justify-end">
+        <button
+          id="checkin-btn"
+          class="bg-emerald-100 text-emerald-500 px-4 py-2 rounded-md shadow-sm"
+        >
+          Check in
+        </button>
+        <button
+          id="checkout-btn"
+          class="bg-rose-100 text-rose-500 px-4 py-2 rounded-md shadow-sm"
+        >
+          Check out
+        </button>
+      </div>
+      <div
+        id="modal"
+        class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 backdrop-blur-sm z-30 flex items-center justify-center"
+      >
+        <form action="#" class="flex justify-end">
+          <div class="flex flex-col gap-4 bg-white p-8 rounded-md z-30">
+            <div>
+              <p>
+                Are you sure you want to
+                <span id="shift-confirm">start</span> your shift?
+              </p>
+            </div>
+            <div class="flex gap-2 self-end">
+              <button
+                id="cancel-btn"
+                type="button"
+                class="bg-rose-100 text-rose-500 px-4 py-2 rounded-md shadow-sm"
+              >
+                Cancel
+              </button>
+              <button
+                id="confirm-btn"
+                type="submit"
+                class="bg-blue-200 text-blue-500 px-4 py-2 rounded-md shadow-sm"
+              >
+                Confirm
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </article>
+    <script src="{% static 'script.js' %}"></script>
+  </body>
+</html>

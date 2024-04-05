@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link href="{% static 'output.css' %}" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="inter-font bg-gray-100">
+    <article class="px-11 h-svh flex items-center justify-center">
+      <div class="w-full md:w-3/4 lg:w-1/2 flex flex-col gap-2">
+        <p class="font-bold text-2xl">Log in</p>
+        <form
+          class="flex flex-col gap-4 w-full border-1 shadow-sm border-zinc-100 p-8 lg:p-11 rounded-md bg-white"
+        >
+          <div class="flex flex-col gap-6">
+            <div
+              class="bg-zinc-100 h-11 rounded-md flex flex-col px-3 py-1 overflow-hidden"
+            >
+              <label for="email" class="text-nowrap text-zinc-500 text-xxs"
+                >Attendance Email</label
+              >
+              <input
+                id="email"
+                type="text"
+                class="self-end bg-zinc-100 w-full placeholder:text-zinc-400 text-xxs outline-none"
+                placeholder="Enter Email"
+              />
+            </div>
+            <div
+              class="bg-zinc-100 h-11 rounded-md flex flex-col px-3 py-1 overflow-hidden"
+            >
+              <label for="email" class="text-nowrap text-zinc-500 text-xxs"
+                >Attendance Password</label
+              >
+              <input
+                id="password"
+                type="text"
+                class="self-end bg-zinc-100 w-full placeholder:text-zinc-400 text-xxs outline-none"
+                placeholder="Enter Password"
+              />
+            </div>
+          </div>
+          <div class="flex justify-end">
+            <button
+              class="bg-blue-600 px-4 py-2 rounded-md text-white text-sm transition active:bg-blue-400"
+              type="submit"
+            >
+              Log in
+            </button>
+          </div>
+        </form>
+      </div>
+    </article>
+  </body>
+</html>
